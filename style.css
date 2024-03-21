@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: work sans;
+  font-family: gilroy;
 }
 
 html,
@@ -38,6 +38,27 @@ body {
   font-family: Monument;
   font-size: 35px;
   letter-spacing: -1px;
+  position: relative;
+}
+#nav h1::after {
+  content: "©️";
+  font-family: gilroy;
+  font-weight: 600;
+  font-size: 2vw;
+  position: absolute;
+  top: 1vw;
+  right: 1.5vw;
+}
+
+#nav h1::before {
+  content: "Model Management";
+  font-family: gilroy;
+  font-weight: 400;
+  font-size: 1vw;
+  position: absolute;
+  bottom: 0.8vw;
+  right: 3vw;
+  letter-spacing: 0.1px;
 }
 
 #nav h2 {
@@ -67,7 +88,6 @@ body {
 #content {
   height: 100%;
   width: 100%;
-  
 }
 
 #content video {
@@ -553,17 +573,105 @@ body {
 #ninethrow {
   width: 100%;
   display: flex;
-  border: 2px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  white-space: nowrap;
+  padding: 1vw;
+  margin-top: 2vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
+
 #ninethrow h1 {
   display: inline-block;
   font-weight: 900;
-  -webkit-text-stroke: 2px black;
+  font-size: 3vw;
+  -webkit-text-stroke: 0.8px black;
   color: transparent;
-  background-color: yellow;
+  letter-spacing: 2px;
+  margin-right: 16px;
+  animation-duration: 3s;
+  animation-name: move2;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
-footer {
-  height: 100%;
+@keyframes move2 {
+  from {
+    transform: translatex(0);
+  }
+  to {
+    transform: translatex(calc(-100% -20px));
+  }
+}
+
+#footermain {
+  height: 20vw;
   width: 100%;
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+  border: 1px solid black;
+  font-size: 1.3vw;
+  font-weight: 400;
+  margin-top: 4vw;
+}
+
+#footertext1 {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2vw;
+  border-right: 2px solid black;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 900;
+}
+
+#footermiddle {
+  border-right: 2px solid black;
+  width: 40%;
+  text-align: center;
+  padding-top: 1.6vw;
+}
+.footerleft1::after {
+  content: "©️";
+  position: absolute;
+  top: 1.3vw;
+  left: 8vw;
+  font-weight: 500;
+}
+
+.footerleft1::before {
+  content: "Model Management";
+  font-size: 7px;
+  position: absolute;
+  top: 3.8vw;
+  left: 3.6vw;
+  font-weight: 900;
+}
+
+#footermiddle h2 {
+  font-weight: 400;
+}
+
+#footerlast {
+  display: grid;
+  padding-top: 2vw;
+  padding-left: 2vw;
+}
+
+#footerlast h2 {
+  font-weight: 100;
+  font-size: 0.93em;
+  letter-spacing: 5px;
+}
+
+#footerlast h4 {
+  padding-top: 2vw;
+}
+
+#lastgap {
+  height: 10vw;
 }
